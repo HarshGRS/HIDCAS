@@ -1,5 +1,5 @@
 // common helpers
-const API_BASE = "http://localhost:8001";
+const API_BASE = "https://hidcas-backend.onrender.com/";
 
 // apply dark-mode preference globally
 if (localStorage.getItem("darkMode") === "true") {
