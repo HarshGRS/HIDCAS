@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile - ProjectChat</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="app">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="logo-section">
+                <h1>HIDCAS</h1>
+            </div>
+
+            <nav class="nav-menu">
+                <a href="dashboard-main.html" class="nav-item">
+                    <span class="icon">💬</span> Chat
+                </a>
+                <a href="search.html" class="nav-item">
+                    <span class="icon">🔍</span> Search
+                </a>
+                <a href="profile.html" class="nav-item active">
+                    <span class="icon">👤</span> Profile
+                </a>
+                <a href="settings.html" class="nav-item">
+                    <span class="icon">⚙️</span> Settings
+                </a>
+                <a href="admin.html" class="nav-item" id="admin-nav" style="display:none;">
+                    <span class="icon">🛡️</span> Admin
+                </a>
+            </nav>
+
+            <button id="logout-button" class="logout">Logout</button>
+        </aside>
+
+        <!-- Main Profile Area -->
+        <main class="profile-area">
+            <h2>User Profile</h2>
+
+            <div class="profile-card">
+                <div class="profile-header">
+                    <div class="avatar">👤</div>
+                    <div class="profile-info">
+                        <h3 id="profile-username">Loading...</h3>
+                        <p id="profile-role">Role: -</p>
+                    </div>
+                </div>
+
+                <div class="profile-section">
+                    <h4>Permissions</h4>
+                    <ul id="permissions-list" class="permissions-list"></ul>
+                </div>
+
+                <div class="profile-section">
+                    <h4>Account Information</h4>
+                    <p>User ID: <span id="user-id">-</span></p>
+                    <p>Member Since: <span id="member-since">-</span></p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script-profile.js"></script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Chat - Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="app">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="logo-section">
+                <h1>HIDCAS</h1>
+            </div>
+
+            <nav class="nav-menu">
+                <a href="dashboard-main.html" class="nav-item active">
+                    <span class="icon">💬</span> Chat
+                </a>
+                <a href="search.html" class="nav-item">
+                    <span class="icon">🔍</span> Search
+                </a>
+                <a href="profile.html" class="nav-item">
+                    <span class="icon">👤</span> Profile
+                </a>
+                <a href="settings.html" class="nav-item">
+                    <span class="icon">⚙️</span> Settings
+                </a>
+                <a href="admin.html" class="nav-item" id="admin-nav" style="display:none;">
+                    <span class="icon">🛡️</span> Admin
+                </a>
+            </nav>
+
+            <section class="section">
+                <h3>Recent Conversations</h3>
+                <ul id="conversation-list" class="list"></ul>
+            </section>
+
+            <button id="logout-button" class="logout">Logout</button>
+        </aside>
+
+        <!-- Main Chat Area -->
+        <main class="chat-area">
+            <div class="chat-header">
+                <h2 id="chat-title">Start a New Conversation</h2>
+                <div class="chat-header-actions">
+                    <button id="clear-chat" class="btn-small">Clear</button>
+                </div>
+            </div>
+
+            <div id="messages" class="messages"></div>
+
+            <div class="sidebar-right">
+                <h3>Documents</h3>
+                <ul id="document-list" class="list"></ul>
+                <p class="small-note">Showing up to 10 recent documents. Use search to access others.</p>
+                <form id="upload-form" class="upload-form">
+                    <label>Upload Document</label>
+                    <input type="file" id="file-input" />
+                    <button type="submit">Upload</button>
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <!-- Message Input -->
+    <div class="message-bar">
+        <form id="message-form" class="message-form">
+            <input type="text" id="message-input" placeholder="Type your message..." autocomplete="off" required />
+            <button type="submit">Send</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

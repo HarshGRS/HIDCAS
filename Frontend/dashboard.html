@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Chat - Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="app">
+        <aside class="sidebar">
+            <section class="section">
+                <h3>Conversations</h3>
+                <ul id="conversation-list" class="list"></ul>
+            </section>
+
+            <section class="section">
+                <h3>Documents</h3>
+                <ul id="document-list" class="list"></ul>
+                <form id="upload-form" class="upload-form">
+                    <input type="file" id="file-input" />
+                    <button type="submit">Upload</button>
+                </form>
+            </section>
+
+            <button id="logout-button" class="logout">Logout</button>
+        </aside>
+
+        <main class="chat-area">
+            <div id="messages" class="messages"></div>
+            <form id="message-form" class="message-form">
+                <input type="text" id="message-input" placeholder="Type your message..." autocomplete="off" required />
+                <button type="submit">Send</button>
+            </form>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

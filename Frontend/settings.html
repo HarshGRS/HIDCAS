@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Settings - ProjectChat</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="app">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="logo-section">
+                <h1>HIDCAS</h1>
+            </div>
+
+            <nav class="nav-menu">
+                <a href="dashboard-main.html" class="nav-item">
+                    <span class="icon">💬</span> Chat
+                </a>
+                <a href="search.html" class="nav-item">
+                    <span class="icon">🔍</span> Search
+                </a>
+                <a href="profile.html" class="nav-item">
+                    <span class="icon">👤</span> Profile
+                </a>
+                <a href="settings.html" class="nav-item active">
+                    <span class="icon">⚙️</span> Settings
+                </a>
+                <a href="admin.html" class="nav-item" id="admin-nav" style="display:none;">
+                    <span class="icon">🛡️</span> Admin
+                </a>
+            </nav>
+
+            <button id="logout-button" class="logout">Logout</button>
+        </aside>
+
+        <!-- Main Settings Area -->
+        <main class="settings-area">
+            <h2>Settings</h2>
+
+            <!-- Account Settings -->
+            <div class="settings-panel">
+                <h4>Account Settings</h4>
+                <div class="setting-item">
+                    <label>Change Password</label>
+                    <div class="form-group">
+                        <input type="password" id="current-password" placeholder="Current Password" />
+                        <input type="password" id="new-password" placeholder="New Password" />
+                        <input type="password" id="confirm-password" placeholder="Confirm Password" />
+                        <button id="change-password-btn">Update Password</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Preferences -->
+            <div class="settings-panel">
+                <h4>Preferences</h4>
+                <div class="setting-item">
+                    <label>
+                        <input type="checkbox" id="dark-mode" /> Dark Mode
+                    </label>
+                </div>
+                <div class="setting-item">
+                    <label>
+                        <input type="checkbox" id="notifications" checked /> Enable Notifications
+                    </label>
+                </div>
+            </div>
+
+            <!-- Danger Zone -->
+            <div class="settings-panel danger">
+                <h4>Danger Zone</h4>
+                <button id="delete-account-btn" class="btn-danger">Delete Account</button>
+            </div>
+        </main>
+    </div>
+
+    <script src="script-settings.js"></script>
+</body>
+</html>
